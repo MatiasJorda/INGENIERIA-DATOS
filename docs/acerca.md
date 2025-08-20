@@ -5,10 +5,13 @@ date: 2025-01-01
 
 # Acerca de mí
 
-Breve presentación personal, intereses y objetivos para este curso.
+Soy **Matias Jordá**, estudiante de cuarto semeestre de **Ingeniería en Inteligencia Artificial** y Ciencia de Datos. Poseo una grán pasión por formar mi futuro profesional y maximizar mis conocimientos entorno al mundo de **Data Science**. Mi mayor diferencial se encuentra en combinar dichas herramientas con mis habilidades de **Comunicación** y **Liderazgo**.
 
 ## Habilidades
-- Lenguajes / herramientas relevantes
+- Nivel **Profesional** de Inglés (C1)
+- Competencias Avanzadas de Python para **Machine Learning**
+- Conocimiento **Profundo** en Análisis de Datos, Visualización de Datos
+- Entendimiento **Matematico Avanzado**
 
 ## Contacto
-- Email institucional
+- **matias.jorda@correo.ucu.edu.uy**
