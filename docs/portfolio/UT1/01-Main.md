@@ -5,4 +5,4 @@ En esta unidad trabajamos los fundamentos de la asignatura, el flujo de trabajo 
 
 ## Prácticas: 
 
-- Práctica 3:  [Practica 3: EDA Netflix dataset con Pandas](01-Practica_3)
+- Práctica 3:  [Practica 3: EDA Netflix dataset con Pandas](UT1/01-Practica_3)
