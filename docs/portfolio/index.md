@@ -5,9 +5,11 @@ date: 2025-01-01
 
 # Portafolio
 
-Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas páginas numeradas
-(`01-...`, `02-...`).
+Bienvenido a las entradas del portafolio. Aquí está documentado el proceso de aprendizaje semestral de la materia.
 
 - Plantilla: [plantilla.md](plantilla.md)
 - Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
+
+  # **Prácticas por Unidad:**
+  - UT1 Eda & Fuentaes: [01-Pracitcas.md](01-practicas)
 
