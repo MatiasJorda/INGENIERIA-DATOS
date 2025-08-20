@@ -15,8 +15,8 @@ En esta actividad se trabajó con un dataset de Netflix, realizando limpieza, vi
 
 ## Actividades (con tiempos estimados)
 - Limpieza y preparación de datos → 1h  
-- Análisis exploratorio y visualizaciones → 1h  
-- Documentación y redacción de insights → 45min  
+- Análisis exploratorio y visualizaciones → 40min  
+- Documentación y redacción de insights → 15min  
 
 ## Desarrollo
 Se analizaron las columnas de películas y series de Netflix, explorando:
