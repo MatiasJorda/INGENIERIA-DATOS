@@ -4,4 +4,4 @@ En esta unidad trabajamos los fundamentos de la asignatura, el flujo de trabajo 
 
 ## Prácticas: 
 
-- Práctica 3 [01-Practica_3](Practica 3: EDA Netflix dataset con Pnadas)
+- Práctica 3:  [Practica 3: EDA Netflix dataset con Pnadas](01-Practica_3)
