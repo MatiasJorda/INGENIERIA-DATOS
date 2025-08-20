@@ -12,5 +12,5 @@ Bienvenido a las entradas del portafolio. Aquí está documentado el proceso de 
 
 ## Prácticas por Unidad:
 
-- UT1 Eda & Fuentaes: [01-Pracitca.md](01-Practica.md)
+- UT1 Eda & Fuentaes: [Practicas_UT1.md](01-Practica.md)
 
