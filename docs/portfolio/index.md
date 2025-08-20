@@ -11,5 +11,5 @@ Bienvenido a las entradas del portafolio. Aquí está documentado el proceso de 
 - Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
 
   # **Prácticas por Unidad:**
-  - UT1 Eda & Fuentaes: [01-Pracitcas.md](01-practicas)
+  - UT1 Eda & Fuentaes: [01-Pracitca.md](01-Practica.md)
 
