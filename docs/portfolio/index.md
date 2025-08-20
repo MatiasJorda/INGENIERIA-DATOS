@@ -10,6 +10,7 @@ Bienvenido a las entradas del portafolio. Aquí está documentado el proceso de 
 - Plantilla: [plantilla.md](plantilla.md)
 - Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
 
-## **Prácticas por Unidad:**
+## Prácticas por Unidad:
+
 - UT1 Eda & Fuentaes: [01-Pracitca.md](01-Practica.md)
 
