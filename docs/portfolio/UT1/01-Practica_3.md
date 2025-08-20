@@ -1,6 +1,6 @@
 ---
 title: "UT1 - Actividad 3: Análisis Netflix Dataset"
-date: 2025-08-20
+date: 20/08/2025
 ---
 
 # UT1 - Actividad 3: Análisis Netflix Dataset
