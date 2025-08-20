@@ -27,9 +27,7 @@ Se analizaron las columnas de películas y series de Netflix, explorando:
 
 ## Evidencias
 - Notebook de análisis: [📓 Ver notebook](../UT1-analysis.ipynb)  
-- Gráficas generadas:  
-  ![Top países productores](assets/netflix_top_countries.png)  
-  ![Distribución por tipo](assets/netflix_distribution.png)  
+ 
 
 ## Reflexión
 Este análisis permitió comprender la importancia de preparar y explorar los datos antes de construir modelos.  
