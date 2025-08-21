@@ -14,9 +14,12 @@ En esta actividad se trabajó con un dataset de Netflix, realizando limpieza, vi
 - Plantear recomendaciones de negocio para Netflix.
 
 ## Actividades (con tiempos estimados)
-- Limpieza y preparación de datos → 1h  
-- Análisis exploratorio y visualizaciones → 40min  
-- Documentación y redacción de insights → 15min  
+| Actividad           | Tiempo | Resultado esperado               |
+|---------------------|:------:|----------------------------------|
+| Limpieza de datos |  1h  | Preparación de datos  |
+| Análisis y visualizaciones      |  45m   | Generar análisis para conclusiones  |
+| Documentación          |  30m   | Realizar reflexiones   |
+
 
 ## Desarrollo
 Se analizaron las columnas de películas y series de Netflix, explorando:
