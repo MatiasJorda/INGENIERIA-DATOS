@@ -30,6 +30,11 @@ Se analizaron las columnas de películas y series de Netflix, explorando:
 
 
 ## Reflexión
-Este análisis permitió comprender la importancia de preparar y explorar los datos antes de construir modelos.  
-El insight más valioso fue detectar la **expansión internacional de Netflix** y cómo su estrategia se diversifica más allá de EE.UU., lo que tiene un impacto directo en su posicionamiento global.
+
+El análisis del dataset de Netflix mostró cómo los datos reflejan decisiones estratégicas clave: desde 2017 las series se convirtieron en el motor principal de crecimiento, marcando un cambio en la identidad de la plataforma.  
+
+También se evidenció la dependencia de mercados como EE.UU. e India, lo que abre la oportunidad de diversificar producciones en regiones emergentes. En cuanto a géneros, dramas y comedias dominan, aunque existen nichos poco explotados (documentales, realities, anime) con gran potencial.  
+
+Este ejercicio permitió no solo practicar técnicas de análisis de datos, sino también comprender cómo la información puede guiar estrategias de contenido y expansión de una compañía global como Netflix.  
+
 
