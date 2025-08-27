@@ -7,4 +7,4 @@ En esta unidad trabajamos los fundamentos de la asignatura, el flujo de trabajo 
 
 - Práctica 3:  [Práctica 3: EDA Netflix dataset con Pandas](01-Practica_3.md)
 
-- Práctica 4: [Práctica 4: EDA Multi-fuentes y Joins]()
+- Práctica 4: [Práctica 4: EDA Multi-fuentes y Joins](01-Practica_4.md)
