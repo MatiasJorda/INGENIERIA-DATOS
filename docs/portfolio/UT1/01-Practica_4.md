@@ -49,7 +49,7 @@ Además, se incluyó un **BONUS con Prefect** para convertir el pipeline en un f
    - Se destacaron ventajas de Prefect: reintentos automáticos, logging, escalabilidad.
 
 ## Evidencias
-- Notebook de análisis:
+- Notebook de análisis: [Open Notebook](Notebooks/Practica_4.ipynb)
 
 ## Reflexión
 Este ejercicio permitió comprender el valor de integrar **múltiples fuentes**:  

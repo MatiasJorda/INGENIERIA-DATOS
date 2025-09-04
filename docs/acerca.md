@@ -9,7 +9,7 @@ Soy **Matias Jordá**, estudiante de cuarto semeestre de **Ingeniería en Inteli
 Mi objetivo es combinar esa carrera profesional con el desarrollo de mis propios **emprendimientos empresariales**, logrando así crecer tanto en el ámbito corporativo como en el emprendedor.
 
 ## Habilidades
-- Nivel **Profesional** de Inglés (C1)
+- Nivel **Profesional** de Inglés (C2)
 - Competencias Avanzadas de Python para **Machine Learning**
 - Conocimiento **Profundo** en Análisis de Datos, Visualización de Datos
 - Entendimiento **Matematico Avanzado**
