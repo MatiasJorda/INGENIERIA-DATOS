@@ -2,15 +2,34 @@ site_name: "Portfolio"
 theme:
   name: material
   language: es
+  logo: assets/Logo_MJ.png        # <- tu logo (respeta mayúsculas)
+  favicon: assets/placeholder.png # <- opcional
   features:
     - navigation.sections
     - navigation.indexes
+    - navigation.top
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
 plugins:
   - search
   - awesome-pages
   - git-revision-date-localized:
       fallback_to_build_date: true
   - glightbox
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -24,3 +43,21 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.tasklist:
       custom_checkbox: true
+
+extra_css:
+  - assets/custom.css              # <- tu CSS
+
+repo_url: https://github.com/MatiasJorda/INGENIERIA-DATOS
+repo_name: MatiasJorda/INGENIERIA-DATOS
+edit_uri: edit/main/docs/   # ruta para que el botón "Editar" funcione
+
+extra:
+  manifest: manifest.webmanifest
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/matias-jorda-b663642a3/
+      name: LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/MatiasJorda
+      name: GitHub
+

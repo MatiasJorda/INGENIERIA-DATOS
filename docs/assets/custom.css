@@ -1,0 +1,41 @@
+/* --- Logo más grande en el header --- */
+.md-header__button.md-logo img,
+.md-logo img {
+  height: 62px;           /* ↑ sube o baja este número (24px por defecto) */
+  width: auto;
+}
+
+/* Ajuste para que el título no baje de línea al agrandar el logo */
+.md-header__title {
+  align-items: center;
+}
+
+/* --- Acentos y selección en violeta --- */
+:root {
+  --mj-violet: #6a00ff; /* cámbialo si quieres otro violeta */
+}
+
+/* Color al seleccionar texto */
+::selection {
+  background: var(--mj-violet);
+  color: #fff;
+}
+
+/* Links al pasar el mouse */
+.md-typeset a:hover {
+  color: var(--mj-violet);
+}
+
+/* Barra inferior del header (accent “underline”) */
+.md-header {
+  box-shadow: 0 2px 0 var(--mj-violet);
+}
+
+/* Botones primarios (opcional) */
+.md-button--primary {
+  background-color: var(--mj-violet);
+  border-color: var(--mj-violet);
+}
+.md-button--primary:hover {
+  filter: brightness(0.9);
+}
