@@ -39,3 +39,65 @@
 .md-button--primary:hover {
   filter: brightness(0.9);
 }
+
+/* --- Títulos más modernos y estilizados --- */
+.md-typeset h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid var(--mj-violet);
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+}
+
+.md-typeset h2 {
+  font-size: 1.7em;
+  color: var(--mj-violet);
+  margin-top: 1em;
+  border-left: 4px solid var(--mj-violet);
+  padding-left: 0.5em;
+}
+
+.md-typeset h3 {
+  font-size: 1.3em;
+  color: #444;
+  font-weight: 500;
+}
+
+/* --- Navegación lateral más clara y con hover personalizado --- */
+.md-nav__link {
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.md-nav__link--active,
+.md-nav__link:hover {
+  background-color: rgba(106, 0, 255, 0.1);
+  border-left: 4px solid var(--mj-violet);
+}
+
+/* --- Fuente moderna y optimizada para lectura --- */
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- Listas con viñetas personalizadas --- */
+.md-typeset ul {
+  list-style-type: '– ';
+  padding-left: 1.5em;
+}
+
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Aplicar la fuente al cuerpo del documento */
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Aplicar la fuente a títulos y navegación */
+h1, h2, h3, .md-nav__link {
+  font-family: 'Poppins', sans-serif;
+}
