@@ -11,6 +11,8 @@ Aquí estará el proceso práctico y teorico a lo largo del semestre, segmentado
 ## **Prácticas por Unidad:**
 
 - UT1 Eda & Fuentaes: [Practicas UT1](UT1/01-Main.md)
+- UT2 Calidad & Ética: [Practicas UT2](UT2/02-Main.md)
+
 
 ## **Resúmnes por Unidad:**
 
