@@ -16,4 +16,4 @@ Aquí estará el proceso práctico y teorico a lo largo del semestre, segmentado
 
 ## **Resúmnes por Unidad:**
 
-- UT1 Eda & Fuentaes: [Resúmenes UT1](UT1/IRat_1.ipynb)
+- UT1 Eda & Fuentaes: [Resumen UT1](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/IRat_1.ipynb)
