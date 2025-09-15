@@ -47,7 +47,48 @@ El objetivo fue practicar diferentes estrategias de acceso a datos, realizar un 
    - Barplot de missingness.
 
 ## Evidencias
-- Notebook de análisis: [Open Notebook](Notebooks/Practica_1.ipynb)
+- Notebook de análisis: [Open Notebook](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Practica_1.ipynb)
+
+### Resultados:
+
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+![alt text](image-13.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
+![alt text](image-17.png)
+
+El análisis exploratorio realizado sobre el dataset de Iris, acompañado por visualizaciones específicas para cada variable, permite obtener una comprensión clara de cómo se distribuyen las características de las flores según su especie.
+
+**1. Separación clara entre especies:**
+
+Tanto los gráficos de distribución como el boxplot de `petal_width` revelan una segmentación muy marcada entre las especies. Por ejemplo:
+
+- **Setosa** se distingue con claridad en todas las variables, especialmente en `petal_length` y `petal_width`, donde no se solapa con las otras especies. Esto sugiere que estas dos variables son altamente predictivas para identificar esta especie.
+- **Versicolor** y **Virginica**, en cambio, presentan una superposición parcial en `sepal_length` y `sepal_width`, lo cual indica que estas variables por sí solas no son suficientes para diferenciarlas de manera tajante.
+
+**2. Variables más informativas:**
+
+De las cuatro variables analizadas, se puede concluir que:
+
+- Las más discriminantes son `petal_length` y `petal_width`, dado que sus distribuciones muestran menor solapamiento entre especies.
+- Por otro lado, `sepal_length` y `sepal_width`, aunque aportan información, tienen distribuciones más similares entre las especies, especialmente entre versicolor y virginica.
+
+**3. Distribuciones asimétricas y presencia de outliers:**
+
+- El boxplot muestra la presencia de **valores atípicos en `petal_width` de setosa**, aunque estos no afectan significativamente la interpretación general del conjunto.
+- Las curvas de densidad indican que no todas las variables siguen distribuciones normales. En algunos casos, como `petal_length` en setosa, se observan picos agudos que marcan concentraciones muy altas en un rango estrecho.
+
+**4. Implicancias para modelos predictivos:**
+
+Este análisis sugiere que un modelo de clasificación supervisado (como KNN, árboles de decisión o regresión logística) puede obtener muy buen rendimiento en este dataset, especialmente si se prioriza el uso de las variables de pétalos.
+
+Además, dado que la separación entre clases es clara en al menos dos dimensiones, **técnicas de reducción de dimensionalidad como PCA** podrían ser útiles para visualizar el espacio de clases o incluso mejorar el rendimiento si se usara un modelo más complejo.
+
 
 ## Reflexión
 El dataset Iris permitió ejercitar el **flujo completo de un EDA**: desde la carga multi-fuentes hasta el análisis estadístico y visual.  
