@@ -1,9 +1,9 @@
-site_name: "Portfolio"
+site_name: "Portfolio - PREVIEW"
 theme:
   name: material
   language: es
-  logo: assets/Logo_MJ.png        # <- tu logo (respeta mayúsculas)
-  favicon: assets/placeholder.png # <- opcional
+  logo: assets/Logo_MJ.png
+  favicon: assets/placeholder.png
   features:
     - navigation.sections
     - navigation.indexes
@@ -32,14 +32,9 @@ plugins:
 
 # Configuración para copiar archivos adicionales
 extra:
-  manifest: manifest.webmanifest
   social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/matias-jorda-b663642a3/
-      name: LinkedIn
     - icon: fontawesome/brands/github
-      link: https://github.com/MatiasJorda
-      name: GitHub
+      link: https://github.com/MatiasJorda/INGENIERIA-DATOS
 
 markdown_extensions:
   - admonition
@@ -56,11 +51,7 @@ markdown_extensions:
       custom_checkbox: true
 
 extra_css:
-  - assets/custom.css              # <- tu CSS
-
-repo_url: https://github.com/MatiasJorda/INGENIERIA-DATOS
-repo_name: MatiasJorda/INGENIERIA-DATOS
-edit_uri: edit/main/docs/   # ruta para que el botón "Editar" funcione
+  - assets/custom_preview.css
 
 nav:
   - Inicio: index.md

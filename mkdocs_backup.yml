@@ -30,17 +30,6 @@ plugins:
       fallback_to_build_date: true
   - glightbox
 
-# Configuración para copiar archivos adicionales
-extra:
-  manifest: manifest.webmanifest
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/matias-jorda-b663642a3/
-      name: LinkedIn
-    - icon: fontawesome/brands/github
-      link: https://github.com/MatiasJorda
-      name: GitHub
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -62,23 +51,12 @@ repo_url: https://github.com/MatiasJorda/INGENIERIA-DATOS
 repo_name: MatiasJorda/INGENIERIA-DATOS
 edit_uri: edit/main/docs/   # ruta para que el botón "Editar" funcione
 
-nav:
-  - Inicio: index.md
-  - Acerca: acerca.md
-  - Portfolio:
-    - portfolio/index.md
-    - UT1:
-      - portfolio/UT1/01-Main.md
-      - portfolio/UT1/01-Practica_1.md
-      - portfolio/UT1/01-Practica_3.md
-      - portfolio/UT1/01-Practica_4.md
-    - UT2:
-      - portfolio/UT2/02-Main.md
-      - portfolio/UT2/02-Practica_5.md
-      - portfolio/UT2/02-Practica_6.md
-      - portfolio/UT2/02-Practica_7.md
-      - Notebooks:
-        - portfolio/UT2/Notebooks/Practica_5.ipynb
-        - portfolio/UT2/Notebooks/Practica_6.ipynb
-        - portfolio/UT2/Notebooks/Practica_7.ipynb
-  - Recursos: recursos.md
+extra:
+  manifest: manifest.webmanifest
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/matias-jorda-b663642a3/
+      name: LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/MatiasJorda
+      name: GitHub
