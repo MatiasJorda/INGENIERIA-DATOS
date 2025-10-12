@@ -205,7 +205,8 @@ ExponentiatedGradient(
 
 ## Evidencias
 
-- Notebook de análisis: [Ver Notebook](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_7.ipynb)
+- Notebook de análisis: [Ver Notebook](https://nbviewer.org/github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_7.ipynb)
+
 
 ---
 
