@@ -2,7 +2,7 @@
   "name": "Portfolio – Matías Jordá",
   "short_name": "MJ Portfolio",
   "icons": [
-    { "src": "assets/Logo_MJ.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/placeholder.png", "sizes": "192x192", "type": "image/png" },
     { "src": "assets/Logo_MJ.png", "sizes": "512x512", "type": "image/png" }
   ],
   "theme_color": "#1a237e",
