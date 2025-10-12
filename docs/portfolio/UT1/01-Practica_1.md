@@ -47,8 +47,14 @@ El objetivo fue practicar diferentes estrategias de acceso a datos, realizar un 
    - Barplot de missingness.
 
 ## Evidencias
-- Notebook de análisis: [Open Notebook](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Practica_1.ipynb)
+- Notebook de análisis:
 
+  [Abrir en Colab](https://colab.research.google.com/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Practica_1.ipynb) ·
+
+  [Ver en GitHub](https://github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Practica_1.ipynb) ·
+
+  [Nbviewer (mirror)](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Practica_1.ipynb) ·
+  
 ### Resultados:
 
 ![alt text](image-8.png)

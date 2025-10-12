@@ -169,7 +169,13 @@ Pipeline([
 
 ## Evidencias
 
-- Notebook de análisis: [Ver Notebook](https://github.com/MatiasJorda/INGENIERIA-DATOS/raw/main/docs/portfolio/UT2/Notebooks/Practica_6.ipynb)
+- Notebook de análisis: 
+
+  [Abrir en Colab](https://colab.research.google.com/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_6.ipynb) ·
+
+  [Ver en GitHub](https://github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_6.ipynb) ·
+
+  [Nbviewer (mirror)](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_6.ipynb)
 
 ---
 

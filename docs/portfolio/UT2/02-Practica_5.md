@@ -45,7 +45,13 @@ Se realizó un proceso sistemático que incluyó:
 
 ## Evidencias
 
-- Notebook de análisis: [Ver Notebook](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_5.ipynb)
+- Notebook de análisis:
+
+  [Abrir en Colab](https://colab.research.google.com/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_5.ipynb) ·
+
+  [Ver en GitHub](https://github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_5.ipynb) ·
+
+  [Nbviewer (mirror)](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT2/Notebooks/Practica_5.ipynb)
 
 ---
 

@@ -29,7 +29,13 @@ Se analizaron las columnas de películas y series de Netflix, explorando:
 - Duración típica de películas y temporadas.
 
 ## Evidencias
-- Notebook de análisis: [Open Notebook](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Netflix-analysis.ipynb)
+- Notebook de análisis:
+
+  [Abrir en Colab](https://colab.research.google.com/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Netflix-analysis.ipynb) ·
+
+  [Ver en GitHub](https://github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Netflix-analysis.ipynb) ·
+
+  [Nbviewer (mirror)](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT1/Notebooks/Netflix-analysis.ipynb) ·
 
 ### Detención y visualización de valores faltantes
 
