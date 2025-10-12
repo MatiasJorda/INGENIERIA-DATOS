@@ -3,7 +3,7 @@ theme:
   name: material
   language: es
   logo: assets/Logo_MJ.png        # <- tu logo (respeta mayúsculas)
-  favicon: assets/placeholder.png # <- opcional
+  favicon: assets/Logo_MJ.png # <- favicon usando el logo
   features:
     - navigation.sections
     - navigation.indexes
