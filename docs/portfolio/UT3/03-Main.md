@@ -18,7 +18,7 @@
 
 ## Prácticas:
 
-- Práctica 8: [Feature Engineering con Pandas](03-Practica_7.md)  
+- Práctica 8: [Feature Engineering con Pandas](03-Practica_8.md)  
 - Práctica 9: [Encoding Avanzado y Target Encoding](03-Practica_9.md)  
 - Práctica 10: [PCA y Feature Selection](03-Practica_10.md)  
 - Práctica 11: [Temporal Feature Engineering](03-Practica_11.md)
