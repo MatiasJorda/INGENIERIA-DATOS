@@ -22,7 +22,3 @@
 - Práctica 9: [Encoding Avanzado y Target Encoding](03-Practica_9.md)  
 - Práctica 10: [PCA y Feature Selection](03-Practica_10.md)  
 - Práctica 11: [Temporal Feature Engineering](03-Practica_11.md)
-
----
-
-¿Querés que también te ayude a redactar la UT4 con el mismo formato cuando la tengas lista?

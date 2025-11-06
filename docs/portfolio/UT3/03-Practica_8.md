@@ -1,6 +1,6 @@
 ---
 title: "UT3 - Actividad 8: Feature Engineering y Evaluación"
-date: 31/10/2025
+
 ---
 
 # UT3 - Actividad 8: Feature Engineering y Evaluación

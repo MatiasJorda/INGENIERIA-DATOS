@@ -163,7 +163,7 @@ Entrena el modelo y elimina features con menor importancia, repitiendo el proces
 **Evaluación:**
 - **RMSE**: $27,557 ± $4,051
 - **R²**: 0.8782 ± 0.0304
-- **Tiempo**: 22.1 segundos (⚡ mucho más rápido)
+- **Tiempo**: 22.1 segundos (mucho más rápido)
 
 **Análisis de consistencia:** Las features seleccionadas por Forward, Backward y RFE tienen una intersección de 15 features, indicando robustez en la selección.
 
@@ -205,7 +205,7 @@ Lasso penaliza los coeficientes con regularización L1, forzando a cero features
 5. BsmtFin SF 1 (|coef|: 5,992.86)
 
 **Evaluación:**
-- **RMSE**: $26,090 ± $4,264 (🏆 mejor RMSE con RF Importance)
+- **RMSE**: $26,090 ± $4,264 (mejor RMSE con RF Importance)
 - **R²**: 0.8908 ± 0.0298
 
 ### 6. Comparación Integral de Métodos
@@ -282,17 +282,17 @@ Lasso penaliza los coeficientes con regularización L1, forzando a cero features
 ### 2. Filter vs Wrapper vs Embedded
 
 **Filter Methods (F-test, MI):**
-- **Velocidad:** ⚡⚡⚡ Muy rápidos (segundos).
+- **Velocidad:** Muy rápidos (segundos).
 - **Captura:** Relaciones univariadas (F-test: lineales, MI: no lineales).
 - **Uso:** Pre-selección rápida, datasets muy grandes, primera pasada.
 
 **Wrapper Methods (Forward/Backward/RFE):**
-- **Velocidad:** 🐌 Lentos (minutos a horas).
+- **Velocidad:** Lentos (minutos a horas).
 - **Captura:** Interacciones entre features, dependencias del modelo.
 - **Uso:** Cuando el tamaño del dataset permite el costo computacional, necesidad de máximo rendimiento.
 
 **Embedded Methods (RF Importance, Lasso):**
-- **Velocidad:** ⚡⚡ Rápidos (segundos a minutos).
+- **Velocidad:** Rápidos (segundos a minutos).
 - **Captura:** Importancia según el modelo, regularización integrada.
 - **Uso:** Balance entre velocidad y rendimiento, cuando el modelo final es conocido.
 
