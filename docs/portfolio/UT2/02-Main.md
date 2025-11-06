@@ -16,4 +16,4 @@
 
 - Práctica 5: [Práctica 5: Missing Data Detective](02-Practica_5.md)
 - Práctica 6: [Práctica 6:  Feature Scaling & Anti-Leakage Pipeline](02-Practica_6.md)
-- Práctica 5: [Práctica 7: Detectar y Corregir Sesgo con Fairlearn](02-Practica_7.md)
+- Práctica 7: [Práctica 7: Detectar y Corregir Sesgo con Fairlearn](02-Practica_7.md)
