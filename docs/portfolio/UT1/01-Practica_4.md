@@ -79,14 +79,29 @@ Se validó la estructura y calidad de los datos iniciales (filas, columnas, tipo
 
 **Transformaciones aplicadas:**
 
-* **Estandarización de nombres de columnas**: Se uniformaron a minúsculas para evitar errores durante los merges.
-* **Extracción de fecha**: Desde `tpep_pickup_datetime` se generó una nueva columna `pickup_date` para facilitar el cruce con el calendario.
-* **Chequeo de tipos de datos clave**: Se validaron tipos compatibles entre columnas clave (`pulocationid ↔ locationid`, `pickup_date ↔ calendar.date`).
-* **Optimización de memoria**: Se convirtieron tipos numéricos a formatos más eficientes (`int16`, `int8`) y se imputaron valores faltantes donde fue necesario.
-* **Limpieza de nulos**:
+* **Estandarización de nombres de columnas**: Se uniformaron a minúsculas para evitar errores durante los merges. Esto garantiza consistencia entre datasets que pueden tener diferentes convenciones de nomenclatura.
 
-  * En `trips`: se eliminaron filas con datos críticos ausentes.
-  * En `zones`: se imputaron nulos con el valor `"Desconocido"`.
+* **Extracción de fecha**: Desde `tpep_pickup_datetime` se generó una nueva columna `pickup_date` (tipo `date`) para facilitar el cruce con el calendario. El rango de fechas detectado fue desde 2008-12-31 hasta 2023-02-01.
+
+* **Chequeo de tipos de datos clave**: Se validaron tipos compatibles entre columnas clave:
+  - `pulocationid` (int64) ↔ `locationid` (int64) → Compatibles
+  - `pickup_date` (date) ↔ `calendar.date` (date) → Compatibles
+
+* **Optimización de memoria**: Para un dataset de 3+ millones de registros, se aplicaron optimizaciones:
+  - `pulocationid` y `dolocationid`: Convertidos a `int16` (reducción de memoria).
+  - `passenger_count`: Convertido a `int8` (valores típicamente entre 0-6).
+  - `locationid` en zones: Convertido a `int16`.
+  - **Resultado**: Ahorro de memoria del 8.1% (de 682.6 MB a 627.0 MB).
+
+* **Limpieza de nulos**:
+  * En `trips`: Se eliminaron filas con datos críticos ausentes (71,743 registros eliminados, principalmente con nulos en `airport_fee`, `congestion_surcharge`, `store_and_fwd_flag`, `ratecodeid`). Se rellenaron nulos en `passenger_count` con el valor típico de 1.
+  * En `zones`: Se imputaron nulos con el valor `"Desconocido"` para mantener integridad referencial.
+
+**Validación final:**
+- Total de viajes después de limpieza: **2,995,023**
+- Viajes sin pickup location: **0**
+- Viajes sin dropoff location: **0**
+- Viajes sin passenger_count: **0**
 
 Al final del proceso, los datasets quedaron **limpios, tipados adecuadamente y listos para ser combinados.**
 
@@ -136,20 +151,44 @@ Al final del proceso, los datasets quedaron **limpios, tipados adecuadamente y l
 
 **Procesamiento realizado:**
 
-* Agrupación de viajes por `borough`.
-* Cálculo de métricas: número de viajes, distancias (media, mediana, desviación estándar), montos totales, tarifas, propinas y cantidad promedio de pasajeros.
-* Generación de nuevas métricas:
+* Agrupación de viajes por `borough` utilizando `groupby()`.
+* Cálculo de métricas estadísticas:
+  - **Conteo**: Número total de viajes por borough.
+  - **Distancias**: Media, mediana y desviación estándar de `trip_distance`.
+  - **Montos**: Media, mediana y desviación estándar de `total_amount`.
+  - **Tarifas**: Media de `fare_amount`.
+  - **Propinas**: Media y mediana de `tip_amount`.
+  - **Pasajeros**: Media de `passenger_count`.
 
-  * `revenue_per_km`: ingreso promedio por kilómetro.
-  * `tip_rate`: proporción de propinas sobre la tarifa.
-  * `market_share`: participación de cada borough en el total de viajes.
+* Generación de nuevas métricas empresariales:
+
+  * `revenue_per_km`: Ingreso promedio por kilómetro (avg_total / avg_distance). Útil para identificar zonas más rentables.
+  * `tip_rate`: Proporción de propinas sobre la tarifa base (avg_tip / avg_fare * 100). Indica satisfacción del cliente.
+  * `market_share`: Participación de cada borough en el total de viajes (num_trips / total * 100). Muestra concentración de demanda.
 
 **Principales hallazgos:**
 
-* **Manhattan**: concentra el 88.4% de los viajes con recorridos cortos (2.4 km promedio) y una alta tasa de propinas (19.5%).
-* **Queens**: destaca por tener los trayectos más largos (12.3 km) y tarifas elevadas.
-* **EWR y Desconocido**: muestran los mayores ingresos por kilómetro, probablemente por ser trayectos especiales o de larga distancia.
-* **Bronx y Staten Island**: tienen las tasas de propina más bajas (<3%).
+* **Manhattan**: 
+  - Concentra el **88.4%** de los viajes (2,648,320 viajes).
+  - Recorridos cortos: **2.41 km** promedio (mediana: 1.61 km).
+  - Alta tasa de propinas: **19.5%**.
+  - Revenue por km: **$9.27**.
+  - Tarifa promedio: **$22.35**.
+
+* **Queens**: 
+  - **9.5%** del market share (285,126 viajes).
+  - Trayectos más largos: **12.32 km** promedio (mediana: 11.27 km).
+  - Tarifas elevadas: **$67.35** promedio.
+  - Revenue por km: **$5.47**.
+  - Tasa de propinas: **15.7%**.
+
+* **EWR y Desconocido**: 
+  - Muestran los mayores ingresos por kilómetro (**$65.21** y **$46.24** respectivamente).
+  - Probablemente trayectos especiales o de larga distancia (aeropuertos, viajes interurbanos).
+
+* **Bronx y Staten Island**: 
+  - Tienen las tasas de propina más bajas (<3%).
+  - Menor volumen de viajes pero con patrones distintivos.
 
 ---
 
@@ -210,14 +249,152 @@ Al final del proceso, los datasets quedaron **limpios, tipados adecuadamente y l
 
 ---
 
+## Preguntas Finales
+
+### 1. ¿Qué diferencia hay entre un LEFT JOIN y un INNER JOIN?
+
+**LEFT JOIN**: Mantiene todos los registros de la tabla izquierda (la que se mantiene), mientras que de la tabla derecha se agregan los valores correspondientes. Si no hay coincidencia, las columnas de la tabla derecha se llenan con valores nulos.
+
+**INNER JOIN**: Realiza una intersección de las dos tablas, manteniendo solo los registros que tienen coincidencias en ambas tablas. Si un registro de una tabla no tiene correspondencia en la otra, se elimina del resultado.
+
+### 2. ¿Por qué usamos LEFT JOIN en lugar de INNER JOIN para trips+zones?
+
+Porque al hacer LEFT JOIN nos aseguramos de mantener toda la información de los viajes, agregando las zonas correspondientes a los mismos. Si hiciéramos INNER JOIN, perderíamos la información de los trips que no tienen zona asignada, lo cual podría eliminar datos válidos y sesgar el análisis.
+
+### 3. ¿Qué problemas pueden surgir al hacer joins con datos de fechas?
+
+Los principales problemas incluyen:
+
+- **Diferencias en el tipo de dato**: Por ejemplo, una columna puede ser `string` mientras que la otra es `datetime`.
+- **Formatos de fecha distintos**: Por ejemplo, `YYYY-MM-DD` vs `DD/MM/YYYY`.
+- **Valores nulos o fechas faltantes**: Pueden impedir el join o generar resultados inesperados.
+- **Zonas horarias**: Si las fechas tienen información de zona horaria, pueden causar desajustes.
+
+### 4. ¿Cuál es la ventaja de integrar múltiples fuentes de datos?
+
+Nos permite realizar un análisis más completo y contextualizado. Además, se pueden cruzar variables de diferentes bases para descubrir patrones que no serían visibles en un solo dataset; esto enriquece la información y habilita conclusiones más profundas.
+
+### 5. ¿Qué insights de negocio obtuviste del análisis integrado?
+
+- **Manhattan concentra la mayoría de los viajes** (88.4% del market share), lo que indica una alta demanda en esta zona.
+- **Los viajes en Queens son más largos y costosos** en promedio, sugiriendo trayectos interurbanos o hacia aeropuertos.
+- **El mejor revenue por kilómetro es de EWR**, probablemente por ser trayectos especiales o de larga distancia.
+- **Hay diferencias claras en el revenue por kilómetro y en la tasa de propinas** entre boroughs, lo que puede informar estrategias de pricing diferenciadas.
+- **Los días especiales pueden tener impacto** en la distancia y tarifa promedio, aunque en este período no se detectaron eventos especiales.
+
+---
+
+## 🚀 BONUS: Orquestación con Prefect
+
+### Metodología
+
+Se transformó el pipeline de análisis en un flujo orquestado utilizando **Prefect**, una herramienta de orquestación de workflows en Python. El objetivo fue demostrar cómo convertir un notebook de análisis en un pipeline reproducible, monitoreable y resiliente.
+
+### Implementación
+
+**Tasks creados:**
+
+1. **`@task cargar_datos`**: 
+   - Carga datos desde URLs (soporta Parquet y CSV).
+   - Incluye reintentos automáticos (`retries=3`) para manejar fallos temporales de red.
+   - Logging integrado para monitoreo.
+
+2. **`@task hacer_join_simple`**:
+   - Realiza el join entre trips y zones.
+   - Normaliza columnas automáticamente.
+   - Crea la columna `pickup_date` si no existe.
+
+3. **`@task analisis_rapido`**:
+   - Genera estadísticas básicas del dataset integrado.
+   - Calcula top boroughs, distancias y tarifas promedio.
+
+**Flow principal:**
+
+El flow `pipeline_taxi_simple()` orquesta el pipeline completo:
+- **Paso 1**: Carga datos (trips desde Parquet, zones desde CSV).
+- **Paso 2**: Realiza join entre trips y zones.
+- **Paso 3**: Ejecuta análisis básico.
+- **Paso 4**: Retorna resultados consolidados.
+
+**Resultados del pipeline:**
+
+- Total registros procesados: **3,066,766**
+- Distancia promedio: **3.85 millas**
+- Tarifa promedio: **$27.02**
+- Top 3 Boroughs:
+  - Manhattan: 2,715,369 viajes
+  - Queens: 286,645 viajes
+  - Unknown: 40,116 viajes
+
+### Ventajas de Prefect
+
+**Comparación: Código normal vs. Prefect**
+
+| Aspecto | Código Normal | Con Prefect |
+|---------|---------------|-------------|
+| Manejo de errores | Si falla, todo se rompe | Reintentos automáticos configurados |
+| Monitoreo | Sin visibilidad | Logs integrados y dashboard |
+| Escalabilidad | Limitada | Ejecución distribuida posible |
+| Reproducibilidad | Manual | Pipeline versionado y documentado |
+
+### Preguntas Bonus
+
+#### 1. ¿Qué ventaja tiene usar `@task` en lugar de una función normal?
+
+Una función normal en Python se ejecuta sin ningún control extra. Cuando usas `@task`:
+
+- **Reintentos automáticos**: Si falla por algo temporal (ej: red caída al bajar datos), Prefect lo reintenta automáticamente.
+- **Timeouts**: Podés definir cortes por tiempo (si un paso tarda demasiado, Prefect lo corta).
+- **Logs integrados**: Tenés logs integrados en la interfaz de Prefect.
+- **Orquestación y monitoreo**: Cada task queda orquestado y monitoreado; podés ver qué falló y reintentar sólo ese paso.
+
+#### 2. ¿Para qué sirve el `@flow` decorator?
+
+El `@flow` define un pipeline completo, que organiza y conecta varios `@task`. Le dice a Prefect: "Esto no es sólo un script de Python, es un flujo de trabajo con dependencias y monitoreo".
+
+Permite:
+
+- **Ejecutar tasks en orden**: Automáticamente respeta las dependencias entre tasks.
+- **Pasar resultados**: Los resultados de un task se pasan automáticamente al siguiente.
+- **Monitorear el flow run entero**: Podés ver el estado de todo el pipeline en tiempo real.
+
+#### 3. ¿En qué casos reales usarías esto?
+
+**Reportes diarios**: Automatizar que cada mañana se bajen datos de ventas, se limpien y se envíen reportes a un dashboard.
+
+**Análisis automáticos**: Procesar logs de usuarios, detectar anomalías o generar alertas de fraude sin intervención manual.
+
+**Pipelines de ML**: Cargar dataset → limpiar/preprocesar → entrenar modelo → guardar métricas. Todo orquestado y monitoreado.
+
+**ETL en producción**: Pipelines de extracción, transformación y carga de datos que se ejecutan periódicamente con garantías de resiliencia.
+
+---
 
 ## Reflexión
-Este ejercicio permitió comprender el valor de integrar **múltiples fuentes**:  
-- Los **joins** enriquecen el dataset y habilitan análisis más completos.  
-- Se observó cómo los **días especiales** influyen en distancia y tarifas promedio.  
-- El análisis por **boroughs** reveló patrones de mercado (zonas más rentables, viajes más largos).  
 
-El **BONUS con Prefect** mostró la diferencia entre un simple notebook y un **pipeline orquestado y resiliente**, acercando el trabajo a escenarios reales de **Data Engineering y MLOps**.  
-Con esto se afianza el puente entre análisis exploratorio (EDA) y la construcción de sistemas de datos reproducibles y escalables.
+Este ejercicio permitió comprender el valor de integrar **múltiples fuentes de datos** y transformar análisis exploratorios en **pipelines reproducibles y escalables**.
+
+### Lecciones Clave
+
+1. **Joins enriquecen el análisis**: Los joins no solo combinan datos, sino que habilitan análisis más completos y contextualizados. El cruce entre trips, zones y calendar permitió descubrir patrones geográficos y temporales que no serían visibles en un solo dataset.
+
+2. **LEFT JOIN vs INNER JOIN**: La elección del tipo de join es crítica. En este caso, usar LEFT JOIN preservó todos los viajes, permitiendo un análisis completo sin perder información valiosa.
+
+3. **Optimización para grandes volúmenes**: Trabajar con 3+ millones de registros requiere técnicas específicas:
+   - Optimización de tipos de datos (`int16`, `int8`) para reducir memoria.
+   - Muestreo estratégico para visualizaciones.
+   - Validación de performance de joins.
+
+4. **Análisis por boroughs revela patrones de mercado**: El análisis mostró que Manhattan concentra el 88.4% de los viajes, mientras que Queens tiene los trayectos más largos. Estas diferencias pueden informar estrategias de negocio diferenciadas.
+
+5. **Días especiales como factor de análisis**: Aunque en este período no se detectaron días especiales, la infraestructura creada permite evaluar el impacto de eventos en el futuro, demostrando la importancia de diseñar análisis extensibles.
+
+6. **Prefect como puente hacia Data Engineering**: El BONUS con Prefect mostró la diferencia entre un simple notebook y un **pipeline orquestado y resiliente**, acercando el trabajo a escenarios reales de **Data Engineering y MLOps**. Las ventajas de reintentos automáticos, logging integrado y monitoreo son fundamentales en producción.
+
+7. **Correlaciones monetarias fuertes**: El análisis de correlaciones reveló que las variables monetarias (`total_amount`, `fare_amount`, `tip_amount`) están fuertemente correlacionadas, mientras que la distancia tiene poca correlación directa, sugiriendo que influyen recargos adicionales, peajes o el tipo de zona.
+
+8. **Validación de joins es esencial**: Verificar que los joins funcionaron correctamente (100% de match rate, 0 nulos en columnas clave) es crucial para garantizar la calidad del análisis posterior.
+
+Con esto se afianza el puente entre análisis exploratorio (EDA) y la construcción de sistemas de datos reproducibles y escalables, preparando el terreno para aplicaciones más complejas en producción.
 
 ---
