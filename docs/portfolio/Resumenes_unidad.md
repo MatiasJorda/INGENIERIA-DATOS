@@ -1,24 +1,19 @@
----
-title: "Indice del Portafolio"
-date: 2025-01-01
----
+# Resumenes por unidad
 
-# Portafolio
-
-Este espacio reune las practicas y los resumenes de cada unidad de la materia. Usa los accesos rapidos para saltar a las practicas o a los resumenes.
+Accesos rapidos a los resumenes de cada unidad.
 
 <style>
 .sections-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0 2.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  margin: 1.4rem 0 2rem 0;
 }
 .section-card {
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.4rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   color: inherit;
@@ -48,7 +43,7 @@ Este espacio reune las practicas y los resumenes de cada unidad de la materia. U
   transform: scaleX(1);
 }
 .section-card h3 {
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.35rem 0;
   font-weight: 600;
   background: linear-gradient(90deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
   -webkit-background-clip: text;
@@ -82,18 +77,38 @@ Este espacio reune las practicas y los resumenes de cada unidad de la materia. U
 </style>
 
 <div class="sections-grid">
-  <a class="section-card" href="Practicas_unidad.md">
-    <h3>Practicas</h3>
-    <p>Ejercicios y proyectos practicos por unidad: EDA, calidad de datos, feature engineering, datos especiales y MLOps.</p>
-    <span class="section-link">Explorar practicas
+  <a class="section-card" href="Resumen/Restumen_UT1.md">
+    <h3>UT1 · EDA y Fundamentos</h3>
+    <p>Notas y hallazgos principales de la unidad 1.</p>
+    <span class="section-link">Ver resumen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="Resumenes_unidad.md">
-    <h3>Resumenes</h3>
-    <p>Apuntes y reflexiones por unidad con los conceptos principales y enlaces a notebooks de soporte.</p>
-    <span class="section-link">Ver resumenes
+  <a class="section-card" href="Resumen/Resumen_UT2.md">
+    <h3>UT2 · Calidad y Etica</h3>
+    <p>Decisiones de limpieza, imputacion y fairness documentadas.</p>
+    <span class="section-link">Ver resumen
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
+    </span>
+  </a>
+  <a class="section-card" href="Resumen/Resumen_UT3.md">
+    <h3>UT3 · Feature Engineering</h3>
+    <p>Ideas clave de encoding, PCA, seleccion y features temporales.</p>
+    <span class="section-link">Ver resumen
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
+    </span>
+  </a>
+  <a class="section-card" href="Resumen/Resumen_UT4.md">
+    <h3>UT4 · Datos especiales</h3>
+    <p>Puntos clave de geoespacial, imagenes y audio como datos.</p>
+    <span class="section-link">Ver resumen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
 </div>
+
+## Lista rapida
+- UT1: [Resumen UT1](Resumen/Restumen_UT1.md)
+- UT2: [Resumen UT2](Resumen/Resumen_UT2.md)
+- UT3: [Resumen UT3](Resumen/Resumen_UT3.md)
+- UT4: [Resumen UT4](Resumen/Resumen_UT4.md)
