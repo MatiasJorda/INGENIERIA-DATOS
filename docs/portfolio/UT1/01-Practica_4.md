@@ -249,6 +249,36 @@ Al final del proceso, los datasets quedaron **limpios, tipados adecuadamente y l
 
 ---
 
+### 7. Perfiles Automatizados (Opcional)
+
+Si se genera un reporte HTML automatizado usando herramientas como `ydata-profiling` o reportes de Prefect, estos pueden ser visualizados de la siguiente manera:
+
+**📄 Ver reporte HTML generado:**
+
+- [Abrir reporte HTML](Notebooks/results/reportes/) (si existe un reporte generado, click para abrir en navegador)
+
+**💻 Alternativa: Abrir desde PowerShell/CMD:**
+
+Si el link no funciona, puedes abrir el reporte ejecutando este comando en PowerShell desde la carpeta del proyecto:
+
+```powershell
+# Navegar a la carpeta del reporte
+cd "docs\portfolio\UT1\Notebooks\results\reportes"
+
+# Abrir el HTML en el navegador predeterminado
+Start-Process "nombre_del_reporte.html"
+```
+
+O desde cualquier ubicación usando la ruta completa:
+
+```powershell
+Start-Process "docs\portfolio\UT1\Notebooks\results\reportes\nombre_del_reporte.html"
+```
+
+**Nota:** Esta sección está preparada para cuando se generen reportes HTML automatizados del análisis de NYC Taxi. Los reportes pueden incluir análisis estadísticos completos, visualizaciones interactivas y alertas sobre la calidad de los datos.
+
+---
+
 ## Preguntas Finales
 
 ### 1. ¿Qué diferencia hay entre un LEFT JOIN y un INNER JOIN?
@@ -395,6 +425,6 @@ Este ejercicio permitió comprender el valor de integrar **múltiples fuentes de
 
 8. **Validación de joins es esencial**: Verificar que los joins funcionaron correctamente (100% de match rate, 0 nulos en columnas clave) es crucial para garantizar la calidad del análisis posterior.
 
-Con esto se afianza el puente entre análisis exploratorio (EDA) y la construcción de sistemas de datos reproducibles y escalables, preparando el terreno para aplicaciones más complejas en producción.
+Con esto se afianza el puente entre análisis exploratorio (EDA) y la construcción de sistemas de datos reproducibles y escalables, preparando el terreno para aplicaciones más complejas en psroducción.
 
 ---

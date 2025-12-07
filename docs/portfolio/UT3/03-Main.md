@@ -1,24 +1,24 @@
-# UNIDAD TEMÁTICA 3: Feature Engineering
+﻿# UNIDAD TEMATICA 3: Feature Engineering
 
-**Al completar UT3**, el estudiante será capaz de:
+Al completar UT3, el estudiante sera capaz de:
 
-- Diseñar features derivadas relevantes para modelos de machine learning
-- Generar variables temporales como antigüedad y categorías de edad
-- Aplicar transformaciones matemáticas (log, raíz cuadrada, potencias)
+- Disenar features derivadas relevantes para modelos de machine learning
+- Generar variables temporales como antiguedad y categorias de edad
+- Aplicar transformaciones matematicas (log, raiz cuadrada, potencias)
 - Evaluar la importancia de features con mutual information y random forest
-- Detectar outliers mediante análisis de distribución
-- Implementar encoding categórico avanzado para variables de alta cardinalidad
-- Prevenir data leakage en técnicas de Target Encoding
+- Detectar outliers mediante analisis de distribucion
+- Implementar encoding categorico avanzado para variables de alta cardinalidad
+- Prevenir data leakage en tecnicas de target encoding
 - Construir pipelines con branching usando ColumnTransformer
-- Comparar métodos de encoding según accuracy, tiempo y dimensionalidad
-- Aplicar PCA para reducción dimensional y analizar varianza explicada
-- Seleccionar features con métodos univariados, wrappers y embedded
-- Diseñar features temporales con lag, rolling windows y agregaciones por usuario
+- Comparar metodos de encoding segun accuracy, tiempo y dimensionalidad
+- Aplicar PCA para reduccion dimensional y analizar varianza explicada
+- Seleccionar features con metodos univariados, wrappers y embedded
+- Disenar features temporales con lag, rolling windows y agregaciones por usuario
 - Medir el impacto de features temporales en modelos transaccionales
 
-## Prácticas:
+## Practicas
 
-- Práctica 8: [Feature Engineering con Pandas](03-Practica_8.md)  
-- Práctica 9: [Encoding Avanzado y Target Encoding](03-Practica_9.md)  
-- Práctica 10: [PCA y Feature Selection](03-Practica_10.md)  
-- Práctica 11: [Temporal Feature Engineering](03-Practica_11.md)
+- [Feature engineering con pandas](03-Practica_8.md)
+- [Encoding avanzado y target encoding](03-Practica_9.md)
+- [PCA y feature selection](03-Practica_10.md)
+- [Temporal feature engineering](03-Practica_11.md)

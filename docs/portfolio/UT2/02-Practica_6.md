@@ -15,8 +15,9 @@ En esta actividad se trabajó con el dataset Ames Housing enfocándonos en la im
 - Comparar diferentes técnicas de escalado y transformación de datos.
 - Entender la relación entre outliers y métodos de escalado.
 - Implementar pipelines de sklearn para prevenir data leakage.
-- Investigar transformadores avanzados como PowerTransformer.
+- Investigar transformadores avanzados (PowerTransformer, QuantileTransformer, MaxAbsScaler) y documentar cuándo usarlos.
 - Aplicar validación cruzada de forma correcta.
+- Bonus: practicar escalado avanzado con el dataset Adult Income (UCI).
 
 ## Actividades (con tiempos estimados)
 
@@ -167,6 +168,31 @@ Pipeline([
 - R² positivo vs negativo
 - Desempeño superior y más estable
 
+### 7. Bonus: UCI Adult Income – Escaladores Avanzados
+
+Como actividad extra se trabajó con el dataset **Adult Income (UCI)** para practicar escalado en un escenario con variables mixtas (numéricas + categóricas). El flujo fue:
+
+1. **Descarga y persistencia**: se añadió lógica para obtener `adult.data` desde el repositorio de UCI (con fallback local en `data/adult/adult.data`).
+2. **Limpieza**: lectura con nombres de columnas, tratamiento de `?` como `NaN`, selección de columnas numéricas (`age`, `fnlwgt`, `education-num`, `capital-gain`, `capital-loss`, `hours-per-week`) y eliminación de filas faltantes.
+3. **Comparativa de escaladores**:
+   - StandardScaler
+   - MinMaxScaler
+   - RobustScaler
+   - PowerTransformer (Yeo-Johnson)
+   - QuantileTransformer (salida normal)
+   - MaxAbsScaler
+4. **Métricas generadas**: tablas con `mean`, `std`, `min`, `max` por columna y métricas agregadas (media absoluta de medias, desviación promedio, skew de `age` y `hours-per-week`).
+5. **Visualización**: histograma comparativo de `hours-per-week` en estado original vs. transformado con QuantileTransformer y PowerTransformer (`adult_hours_scalers.png`).
+
+**Hallazgos clave:**
+- Standard/MinMax centraron y acotaron, pero no resolvieron las colas largas de `capital-gain`/`capital-loss`.
+- RobustScaler redujo la influencia de outliers moderados, pero la asimetría en `hours-per-week` se mantuvo.
+- PowerTransformer normalizó las distribuciones más sesgadas, reduciendo el skew a valores cercanos a 0.
+- QuantileTransformer generó distribuciones casi normales, ideal para algoritmos que asumen gaussianidad (a costa de perder unidades originales).
+- MaxAbsScaler preservó la esparsidad y es útil cuando se combinan numéricas con codificaciones one-hot sparse.
+
+**Conclusión del bonus:** la elección del escalador depende del problema. Para variables con colas largas (ganancias, horas), transformadores no lineales (Power/Quantile) ofrecen ventajas claras. En pipelines mixtos, MaxAbsScaler permite escalar sin densificar matrices. La exploración refuerza la idea de que “el escalado no es solo matemáticas, sino comprender datos, algoritmos y objetivos”.
+
 ## Evidencias
 
 - Notebook de análisis: 
@@ -241,9 +267,15 @@ Las correlaciones se mantienen estables después de la imputación, con diferenc
 
 ---
 
+### Visualización: Bonus Adult Income
+
+- `adult_hours_scalers.png` – Histograma comparativo de la variable `hours-per-week` en su versión original vs. transformada por QuantileTransformer y PowerTransformer. Se observa cómo se corrige la asimetría y se acerca la distribución a una forma normal, lo que facilita el uso de algoritmos sensibles a la escala.
+
+---
+
 ## Reflexión
 
-Esta actividad permitió comprender profundamente la importancia crítica del escalado de características en el pipeline de machine learning. No todos los scalers son iguales: mientras que StandardScaler y MinMaxScaler solo reescalan linealmente, PowerTransformer transforma la forma de la distribución, corrigiendo asimetrías y reduciendo el impacto de outliers.
+Esta actividad permitió comprender profundamente la importancia crítica del escalado de características en el pipeline de machine learning. No todos los scalers son iguales: mientras que StandardScaler y MinMaxScaler solo reescalan linealmente, PowerTransformer transforma la forma de la distribución, corrigiendo asimetrías y reduciendo el impacto de outliers. El bonus con Adult Income demostró, además, que en dominios mixtos conviene combinar distintas herramientas (Quantile para gaussianizar colas, MaxAbs para preservar esparsidad), reforzando la idea de que la selección del escalador debe ser guiada por evidencia y contexto.
 
 ### Lecciones Clave Aprendidas
 

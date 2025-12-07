@@ -1,14 +1,10 @@
+﻿# UNIDAD TEMATICA 1: EDA & Fundamentos
 
-# UNIDAD TEMÁTICA 1: EDA & Fundamentos
+En esta unidad trabajamos los fundamentos de la asignatura, el flujo de trabajo con GitHub Classroom y practicas de EDA con pandas y visualizacion.
 
-En esta unidad trabajamos los fundamentos de la asignatura, el flujo de trabajo con GitHub Classroom y prácticas de EDA con pandas y visualización.
+## Practicas
 
-## Prácticas: 
-
-- Práctica 1: [Práctica 1: Exploración del dataset Iris](01-Practica_1.md)
-
-- Práctica 2: Cargar Repo Online, Realizado ✔️
-
-- Práctica 3:  [Práctica 3: EDA Netflix dataset con Pandas](01-Practica_3.md)
-
-- Práctica 4: [Práctica 4: EDA Multi-fuentes y Joins](01-Practica_4.md)
+- [EDA Iris: carga multifuente y perfilado](01-Practica_1.md)
+- Configuracion inicial: repositorio en GitHub Classroom
+- [Netflix: insights de catalogo con pandas](01-Practica_3.md)
+- [NYC Taxi: integracion multi-fuente y joins](01-Practica_4.md)

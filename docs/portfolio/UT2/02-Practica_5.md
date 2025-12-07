@@ -7,15 +7,16 @@ date: 20/08/2025
 
 ## Contexto
 
-En esta actividad se trabajó con un dataset relacionado con propiedades residenciales, enfocándonos en identificar, clasificar y tratar datos faltantes (missing data), así como en la detección y análisis de valores atípicos (outliers). Se aplicaron herramientas estadísticas y visuales con el objetivo de mejorar la calidad del dataset antes de su uso para modelado o análisis más avanzados.
+En esta actividad se trabajó principalmente con el dataset **Ames Housing** (propiedades residenciales) para identificar, clasificar y tratar datos faltantes, así como para detectar valores atípicos (outliers). Además, se incorporó un **bonus opcional** con el dataset **Air Quality (UCI)** para explorar algoritmos avanzados de imputación y detección de outliers en datos ambientales. El objetivo global fue mejorar la calidad de los datos antes de su uso en análisis o modelado avanzado, documentando decisiones éticas y reproducibles.
 
 ## Objetivos
 
 - Detectar datos faltantes y clasificarlos en MCAR, MAR o MNAR.
 - Identificar outliers mediante IQR y Z-Score.
-- Implementar estrategias de imputación (simple e inteligente).
+- Implementar estrategias de imputación (simple, contextual y avanzada).
 - Crear visualizaciones para comprender patrones de calidad de datos.
 - Reflexionar sobre decisiones éticas en la limpieza de datos.
+- Bonus: aplicar algoritmos avanzados (KNNImputer, IterativeImputer, IsolationForest, LOF) en un segundo dataset.
 
 ## Actividades (con tiempos estimados)
 
@@ -41,6 +42,7 @@ Se realizó un proceso sistemático que incluyó:
 - Visualización de anomalías con boxplots y scatter plots.
 - Imputación basada en media, mediana, moda y lógica de negocio.
 - Imputación inteligente contextual por grupo (`Neighborhood`, `House Style`).
+- Bonus: descarga/limpieza del dataset Air Quality, imputación avanzada, detección de outliers con ML y visualización con PCA.
 - Consideraciones éticas sobre imputación y eliminación de datos.
 
 ## Evidencias
@@ -135,6 +137,43 @@ Se identificaron columnas con más del 20% de datos faltantes como candidatas a 
 
 - Dataset sin valores nulos en variables clave.
 - Reducción del sesgo mediante imputación contextual.
+
+---
+
+### Bonus: Air Quality Dataset (Imputación avanzada + Outliers)
+
+**Dataset**  
+Se descargó el dataset *Air Quality* de UCI, que contiene mediciones horarias de contaminantes atmosféricos. El archivo original se provee como CSV/ZIP con separador `;`, decimales con coma y valores faltantes codificados como `-200`. El script intenta primero la descarga directa y, en caso de error (HTTP 404), recurre a la versión comprimida (`urllib` + `zipfile`), persistiendo el CSV en `data/air_quality/AirQualityUCI.csv` para futuras ejecuciones.
+
+**Preparación y limpieza**
+
+- Conversión de columnas `Date` + `Time` a un `datetime` único y ordenamiento temporal.
+- Remoción de columnas vacías o sin nombre.
+- Reemplazo sistemático del código `-200` por `NaN`.
+- Selección de columnas numéricas relevantes para análisis (`numeric_cols_air`).
+- Resumen del porcentaje de missing por columna para priorizar imputadores.
+
+**Imputación avanzada**
+
+- Baseline: `SimpleImputer(strategy='median')`.
+- Algoritmos avanzados: `KNNImputer (n_neighbors=5)` y `IterativeImputer (MICE)`.
+- Comparación de medias y desviaciones estándar antes/después para detectar sesgos introducidos.
+- Métricas adicionales: MAE medio entre imputaciones vs. baseline.
+
+**Detección de outliers**
+
+- Se utilizaron los datos imputados con MICE (`IterativeImputer`) para estabilizar el dataset.
+- Algoritmos aplicados:
+  - `IsolationForest(contamination=0.05)`
+  - `LocalOutlierFactor(n_neighbors=20, contamination=0.05)`
+- Se reportaron cantidades relativas de outliers por método y su intersección.
+- Visualización con PCA 2D para resaltar regiones con anomalías (`results/visualizaciones/air_quality_outliers.png`).
+
+**Hallazgos**
+
+- Tanto KNN como MICE preservaron mejor la estructura multivariada que la mediana simple; MICE resultó más estable en presencia de colas largas.
+- Isolation Forest y LOF coincidieron en un ~3% de lecturas como outliers extremos, probablemente asociadas a eventos ambientales puntuales.
+- Documentar cada paso (descarga, limpieza, imputación, detección) facilita reproducibilidad y auditoría en dominios sensibles como salud o ambiente.
 
 ---
 
