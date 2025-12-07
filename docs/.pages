@@ -1,6 +1,6 @@
 nav:
   - Inicio: index.md
-  - Acerca de mヴ: acerca.md
+  - Acerca de mí: acerca.md
   - Portfolio: portfolio/
 arrange:
   - index.md

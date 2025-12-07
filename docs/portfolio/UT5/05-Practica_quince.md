@@ -240,11 +240,14 @@ Ambas son alternativas modernas a Airflow, pero Dagster es más "data-centric" m
 
 ## Evidencias
 
-- Notebook de implementación: `docs/portfolio/UT5/Notebooks/quince.ipynb`
-- Pipeline ETL completo funcionando con validación
-- Respuestas de investigación documentadas con referencias a la documentación oficial
-- Implementación de extensión DataOps (validación con logging estructurado)
+- Notebook principal:
 
+  [Abrir en Colab](https://colab.research.google.com/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT5/Notebooks/quince.ipynb) ·
+  
+  [Ver en GitHub](https://github.com/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT5/Notebooks/quince.ipynb) ·
+  
+  [Nbviewer (mirror)](https://nbviewer.org/github/MatiasJorda/INGENIERIA-DATOS/blob/main/docs/portfolio/UT5/Notebooks/quince.ipynb)
+  
 ### Resultados
 
 En este proyecto trabajamos con Prefect para diseñar e implementar un pipeline ETL completo. El enfoque principal fue:

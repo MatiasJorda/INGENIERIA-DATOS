@@ -77,28 +77,28 @@ Accesos rapidos a los resumenes de cada unidad.
 </style>
 
 <div class="sections-grid">
-  <a class="section-card" href="Resumen/Restumen_UT1.md">
+  <a class="section-card" href="../Resumen/Restumen_UT1/">
     <h3>UT1 · EDA y Fundamentos</h3>
     <p>Notas y hallazgos principales de la unidad 1.</p>
     <span class="section-link">Ver resumen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="Resumen/Resumen_UT2.md">
+  <a class="section-card" href="../Resumen/Resumen_UT2/">
     <h3>UT2 · Calidad y Etica</h3>
     <p>Decisiones de limpieza, imputacion y fairness documentadas.</p>
     <span class="section-link">Ver resumen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="Resumen/Resumen_UT3.md">
+  <a class="section-card" href="../Resumen/Resumen_UT3/">
     <h3>UT3 · Feature Engineering</h3>
     <p>Ideas clave de encoding, PCA, seleccion y features temporales.</p>
     <span class="section-link">Ver resumen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="Resumen/Resumen_UT4.md">
+  <a class="section-card" href="../Resumen/Resumen_UT4/">
     <h3>UT4 · Datos especiales</h3>
     <p>Puntos clave de geoespacial, imagenes y audio como datos.</p>
     <span class="section-link">Ver resumen
