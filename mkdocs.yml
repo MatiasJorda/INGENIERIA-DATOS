@@ -67,6 +67,8 @@ nav:
   - Acerca: acerca.md
   - Portfolio:
     - portfolio/index.md
+    - portfolio/Practicas_unidad.md
+    - portfolio/Resumenes_unidad.md
     - UT1:
       - portfolio/UT1/01-Main.md
       - portfolio/UT1/01-Practica_1.md
