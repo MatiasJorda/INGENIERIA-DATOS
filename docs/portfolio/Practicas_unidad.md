@@ -77,35 +77,35 @@ Accesos rapidos a las practicas de cada unidad. Cada tarjeta es clickeable.
 </style>
 
 <div class="sections-grid">
-  <a class="section-card" href="UT1/01-Main.md">
+  <a class="section-card" href="../UT1/01-Main/">
     <h3>UT1 · EDA y Fundamentos</h3>
     <p>Setup de repos, EDA inicial y exploracion Iris, Netflix y NYC Taxi.</p>
     <span class="section-link">Ver practicas
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="UT2/02-Main.md">
+  <a class="section-card" href="../UT2/02-Main/">
     <h3>UT2 · Calidad y Etica</h3>
     <p>Missing data, escalado sin leakage y fairness con Fairlearn.</p>
     <span class="section-link">Ver practicas
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="UT3/03-Main.md">
+  <a class="section-card" href="../UT3/03-Main/">
     <h3>UT3 · Feature Engineering</h3>
     <p>Encoding avanzado, PCA, selection y features temporales.</p>
     <span class="section-link">Ver practicas
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="UT4/04-Main.md">
+  <a class="section-card" href="../UT4/04-Main/">
     <h3>UT4 · Datos especiales</h3>
     <p>Geoespacial con GeoPandas, preprocesamiento de imagen y audio.</p>
     <span class="section-link">Ver practicas
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="UT5/05-Main.md">
+  <a class="section-card" href="../UT5/05-Main/">
     <h3>UT5 · ML Ops</h3>
     <p>Labs de Google Cloud, Dataprep y orquestacion ETL con Prefect.</p>
     <span class="section-link">Ver practicas

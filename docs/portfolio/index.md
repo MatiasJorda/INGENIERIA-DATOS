@@ -82,14 +82,14 @@ Este espacio reune las practicas y los resumenes de cada unidad de la materia. U
 </style>
 
 <div class="sections-grid">
-  <a class="section-card" href="Practicas_unidad.md">
+  <a class="section-card" href="Practicas_unidad">
     <h3>Practicas</h3>
     <p>Ejercicios y proyectos practicos por unidad: EDA, calidad de datos, feature engineering, datos especiales y MLOps.</p>
     <span class="section-link">Explorar practicas
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg>
     </span>
   </a>
-  <a class="section-card" href="Resumenes_unidad.md">
+  <a class="section-card" href="Resumenes_unidad">
     <h3>Resumenes</h3>
     <p>Apuntes y reflexiones por unidad con los conceptos principales y enlaces a notebooks de soporte.</p>
     <span class="section-link">Ver resumenes

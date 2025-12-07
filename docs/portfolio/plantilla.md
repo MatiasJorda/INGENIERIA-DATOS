@@ -26,12 +26,12 @@ Resumen de lo realizado, decisiones y resultados intermedios.
 - QuÃ© aprendiste, quÃ© mejorarÃ­as, prÃ³ximos pasos
 
 ## Referencias
-ConsultÇ­ tambiÇ¸n: [Acerca de mÇð](../acerca.md).
+Consultá también: [Acerca de mí](../acerca.md).
 
 
 ---
 
-## GuÃ­a de formato y ejemplos (MkDocs Material)
+## Guía de formato y ejemplos (MkDocs Material)
 
 UsÃ¡ estos ejemplos para enriquecer tus entradas. Todos funcionan con la configuraciÃ³n del template.
 
@@ -91,7 +91,7 @@ Click para ampliar (lightbox):
 
 ### Enlaces internos y relativos
 
-ConsultÇ­ tambiÇ¸n: [Acerca de mÇð](../acerca.md).
+Consultá también: [Acerca de mí](../acerca.md).
 
 ### Notas al pie y citas
 

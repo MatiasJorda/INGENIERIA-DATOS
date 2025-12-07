@@ -18,4 +18,6 @@ Acutalmente estoy desarrollando una **agencia de autamtización impulsada con In
 - Habilidad **Comunicativa** bien desarrollada
 
 ## Contacto
-- **matias.jorda@correo.ucu.edu.uy**
+- Académico: **matias.jorda@correo.ucu.edu.uy**
+- Profesional: **matias.jorda.centurion@gmal.com**
+- Portafolio: [matiasjorda.com](https://matias-jorda.vercel.app/)
