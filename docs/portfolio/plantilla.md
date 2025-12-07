@@ -1,4 +1,4 @@
----
+﻿---
 title: "Plantilla de entrada de portafolio"
 date: 2025-01-01
 ---
@@ -8,32 +8,32 @@ date: 2025-01-01
 Completa esta plantilla para cada entrada del portafolio.
 
 ## Contexto
-Breve descripción del tema/actividad.
+Breve descripciÃ³n del tema/actividad.
 
 ## Objetivos
-- Objetivo específico y medible
+- Objetivo especÃ­fico y medible
 
 ## Actividades (con tiempos estimados)
-- Tarea X — 45 min
+- Tarea X â€” 45 min
 
 ## Desarrollo
 Resumen de lo realizado, decisiones y resultados intermedios.
 
 ## Evidencias
-- Capturas, enlaces a notebooks/repos, resultados, gráficos
+- Capturas, enlaces a notebooks/repos, resultados, grÃ¡ficos
 
-## Reflexión
-- Qué aprendiste, qué mejorarías, próximos pasos
+## ReflexiÃ³n
+- QuÃ© aprendiste, quÃ© mejorarÃ­as, prÃ³ximos pasos
 
 ## Referencias
-- Fuentes consultadas con enlaces relativos cuando corresponda
+ConsultÇ­ tambiÇ¸n: [Acerca de mÇð](../acerca.md).
 
 
 ---
 
-## Guía de formato y ejemplos (MkDocs Material)
+## GuÃ­a de formato y ejemplos (MkDocs Material)
 
-Usá estos ejemplos para enriquecer tus entradas. Todos funcionan con la configuración del template.
+UsÃ¡ estos ejemplos para enriquecer tus entradas. Todos funcionan con la configuraciÃ³n del template.
 
 ### Admoniciones
 
@@ -41,9 +41,9 @@ Usá estos ejemplos para enriquecer tus entradas. Todos funcionan con la configu
     Este es un bloque informativo.
 
 !!! tip "Sugerencia"
-    Considerá alternativas y justifica decisiones.
+    ConsiderÃ¡ alternativas y justifica decisiones.
 
-!!! warning "Atención"
+!!! warning "AtenciÃ³n"
     Riesgos, limitaciones o supuestos relevantes.
 
 ### Detalles colapsables
@@ -51,9 +51,9 @@ Usá estos ejemplos para enriquecer tus entradas. Todos funcionan con la configu
 ???+ info "Ver desarrollo paso a paso"
     - Paso 1: preparar datos
     - Paso 2: entrenar modelo
-    - Paso 3: evaluar métricas
+    - Paso 3: evaluar mÃ©tricas
 
-### Código con resaltado y líneas numeradas
+### CÃ³digo con resaltado y lÃ­neas numeradas
 
 ```python hl_lines="2 6" linenums="1"
 def train(
@@ -75,11 +75,11 @@ def train(
 
 | Actividad           | Tiempo | Resultado esperado               |
 |---------------------|:------:|----------------------------------|
-| Revisión bibliográfica |  45m  | Lista de fuentes priorizadas     |
-| Implementación      |  90m   | Script ejecutable/documentado    |
-| Evaluación          |  60m   | Métricas y análisis de errores   |
+| RevisiÃ³n bibliogrÃ¡fica |  45m  | Lista de fuentes priorizadas     |
+| ImplementaciÃ³n      |  90m   | Script ejecutable/documentado    |
+| EvaluaciÃ³n          |  60m   | MÃ©tricas y anÃ¡lisis de errores   |
 
-### Imágenes con glightbox y atributos
+### ImÃ¡genes con glightbox y atributos
 
 Imagen directa (abre en lightbox):
 
@@ -91,14 +91,16 @@ Click para ampliar (lightbox):
 
 ### Enlaces internos y relativos
 
-Consultá también: [Acerca de mí](../acerca.md) y [Recursos](../recursos.md).
+ConsultÇ­ tambiÇ¸n: [Acerca de mÇð](../acerca.md).
 
 ### Notas al pie y citas
 
-Texto con una afirmación que requiere aclaración[^nota].
+Texto con una afirmaciÃ³n que requiere aclaraciÃ³n[^nota].
 
 [^nota]: Esta es una nota al pie con detalles adicionales y referencias.
 
-### Emojis y énfasis
+### Emojis y Ã©nfasis
 
 Resultados destacados :rocket: :sparkles: y conceptos `clave`.
+
+

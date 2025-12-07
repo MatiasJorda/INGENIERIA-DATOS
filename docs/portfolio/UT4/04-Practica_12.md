@@ -246,8 +246,6 @@ Se implementaron 5 tareas adicionales para profundizar en análisis geoespacial 
 
 **Interpretación:** Las distancias por red vial son sistemáticamente mayores que las euclidianas, especialmente en barrios periféricos con menor densidad de calles.
 
-![Distancias por Red Vial](Notebooks/results/visualizaciones/12-opcional-distancias_red_vial.png)
-
 ### Tarea 3: Overlays y Zonas Prohibidas
 
 **Objetivo:** Excluir áreas no habitables (parques, agua, industriales) para recalcular métricas de cobertura y priorización.
@@ -265,8 +263,6 @@ Se implementaron 5 tareas adicionales para profundizar en análisis geoespacial 
 - Área total excluida: ~50-100 km² (dependiendo de la cobertura OSM)
 - Impacto en densidad: Aumenta la densidad poblacional ajustada en barrios con grandes parques
 - Priorización ajustada: Barrios con menor área habitable real requieren más atención
-
-![Zonas Prohibidas](Notebooks/results/visualizaciones/12-opcional-zonas_prohibidas.png)
 
 ### Tarea 4: Visualización Avanzada Interactiva
 
@@ -500,8 +496,6 @@ Start-Process "docs\portfolio\UT4\Notebooks\results\visualizaciones\12-opcional-
 - La diferencia promedio es de ~500-1,000 m, indicando que el acceso real requiere recorrer más distancia que la línea recta
 - Barrios con mayor diferencia suelen tener barreras físicas (río, autopistas, vías férreas) que obligan a rutas más largas
 - Esta visualización es crucial para planificación urbana realista: la distancia euclidiana subestima el tiempo y costo de acceso
-
-![Distancias por Red Vial](Notebooks/results/visualizaciones/12-opcional-distancias_red_vial.png)
 
 ---
 
